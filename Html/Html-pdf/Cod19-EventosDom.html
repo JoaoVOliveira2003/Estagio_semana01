@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eventos DOM e Eventos de Manipulação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  onload="abriu()" onunload="fechou()">
+    <section>
+        <p>
+            <b>Evento</b> - Descrição<br>
+            <br>
+            <b>onFocus</b> - Ocorre quando o foco entra em um campo<br>
+            <b>onBlur</b> - Ocorre quando o foco sai de um campo<br><br>
+
+            <b>onClick</b> - Ocorre quando um objeto é clicado<br><br>
+            <b>onChange</b> - Ocorre quando um campo é alterado<br><br>
+
+            <b>onLoad</b> - Ocorre quando um objeto é carregado<br>
+            <b>onUnload</b> - Ocorre quando um objeto é fechado<br><br>
+
+            <b>onMouseOver</b> - Ocorre quando o ponteiro do mouse passa sobre um objeto<br>
+            <b>onMouseOut</b> - Ocorre quando o ponteiro do mouse sai de cima de um objeto<br><br>
+
+            <b>onSubmit</b> - Ocorre quando um formulário é submetido.
+        </p>
+
+        <hr>
+        <h3>Eventos onfocus e onblur</h3>
+
+        <p>Quando você clica no campo - fica amarelo - onfocus </p>
+        <p>Quando você sai do campo - fica vermelho - onblur </p>
+
+        <hr>
+
+        <h3>Evento onClick</h3>
+        <p>Você clica em algo, algo acontece</p>
+        <button onclick="MudarCor()">Muda a cor</button>
+
+        <hr>
+
+        <h3>Evento onChange</h3>
+        <p>Quando você muda algo, algo acontece</p>
+        <p>Se você mudar o campo abaixo, tem uma mensagem nova</p>
+        <input type="text" onchange="MudançaDeTexto(this.value)" value="texto base">
+        <hr>
+        
+        <h3>Evento onLoad e onUnload</h3>
+        <p>Basicamente onLoad é quando você entra em alguma página, algo acontece</p>
+        <p>Basicamente onUnload é quando você sai de uma página, algo acontece</p>
+
+        <hr>
+        
+        <h3>Eventos onMouseOver e onMouseOut</h3>
+        <p>Passa o mouse em cima de algo, algo acontece, sai do mouse de perto, outra coisa acontece</p>
+        <button onmouseout="botaoNormal()" onmouseover="BotaoGrande()" id="botao">Passe o mouse</button>
+
+        <hr>
+
+        <h3>Evento onSubmit</h3>
+        <p>Mais simples, você clica e simplesmente submete um formulário (aqui nesse exemplo, não muda muito)</p>
+        <button type="submit" onclick="MudarCor()">Submeter</button>
+
+        <hr>
+    </section>
+
+    <script>
+        function botaoNormal(){
+            document.getElementById("botao").style.background  = "blue";
+        }
+
+        function BotaoGrande(){
+            document.getElementById("botao").style.fontSize  = "24px";
+        }
+
+        function focusFunction() {
+            document.getElementById("myInput").style.background = "yellow";
+        }
+
+        function blurFunction() {
+            document.getElementById("myInput").style.background = "red";
+        }
+
+        function MudarCor(){
+            var cor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.querySelector('button').style.backgroundColor = cor;
+        }
+
+        function MudançaDeTexto(val){
+            alert("O novo texto é - " + val);
+        }
+/*
+        function abriu() {
+            alert("Exemplo de onLoad");
+        }
+
+        function fechou() {
+            alert("Exemplo de onUnload");
+        }
+
+*/
+    </script>
+</body>
+</html>

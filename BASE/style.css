@@ -1,0 +1,56 @@
+/* Estilos para o corpo */
+body {
+  font: normal 15pt Arial;
+  background-color: blueviolet;
+}
+
+/* Estilos para elementos de entrada */
+input {
+  text-align: center;
+}
+
+/* Estilos para botões com a classe .botao */
+.botao {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Estilos para elementos de seção */
+section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Estilos para cabeçalhos */
+header {
+  text-align: center;
+}
+
+/* Estilos para rodapés */
+footer {
+  text-align: center;
+}
+
+/* Estilos para tabelas */
+table {
+  align-items: center;
+  font-family: Arial, sans-serif;
+  width: 70%;
+}
+
+/* Estilos para células de tabela */
+td, th {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Estilos para a classe .centralizar */
+.centralizar {
+  margin-left: 8%;
+}

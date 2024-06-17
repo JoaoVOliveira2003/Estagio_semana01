@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="JavaScript">
+        var scrtxt = "Aqui vai a mensagem para os visitantes da sua página que " +
+            "ficarão olhando por horas de pura fascinação...";
+        var lentxt = scrtxt.length;
+        var width = 100;
+        var pos = 1 - width;
+
+        function scroll() {
+            pos++;
+            var scroller = "";
+            if (pos == lentxt) pos = 1 - width;
+            if (pos < 0) {
+                for (var i = 1; i <= Math.abs(pos); i++) {
+                    scroller = scroller + " ";
+                }
+                scroller = scroller + scrtxt.substring(0, width - i + 1);
+            } else {
+                scroller = scroller + scrtxt.substring(pos, width + pos);
+            }
+            window.status = scroller;
+            setTimeout("scroll()", 150);
+        }
+    </script>
+</head>
+<body onLoad="scroll(); return true;">
+    Aqui está a sua página bacana!
+</body>
+</html>

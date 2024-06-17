@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulários de Exemplo</title>
+</head>
+
+<style>
+   body {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       margin: 0;
+       font-family: Arial, sans-serif;
+   }
+   form {
+       margin-bottom: 50px;
+       text-align: center;
+   }
+   table {
+       margin: 0 auto;
+   }
+</style>
+
+
+<body center>
+    <!-- Formulário 1 -->
+    <form>
+        <p>Escreva o nome de uma cidade</p>
+        <input type="text" name="p_cidade" size="20" maxlength="20">
+
+        <input type="text" name="p_cidade_velha" value="'Curitiba'">
+        <br><br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Enviar" name="p_operacao">
+    </form>
+    
+    <br>
+    
+    <!-- Formulário 2 -->
+    <form>
+        <p>Selecione alguma comida</p>
+        <input type="checkbox" name="p_escolha1" value="fruta1"> Abacaxi
+        <input type="checkbox" name="p_escolha2" value="fruta2"> Arroz
+        <input type="checkbox" name="p_escolha3" value="fruta3"> Cenoura
+        <br><br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Enviar" name="p_operacao">
+    </form>
+    
+    <br><br><br>
+    
+    <!-- Formulário 3 -->
+
+        <form>
+            <p>Marque os tipos de livros que você lê</p>
+            <select name="p_livro" size="3" multiple>
+                <option value="FC">Ficção</option>
+                <option value="AV">Aventura</option>
+                <option value="NF">Não-Ficção</option>
+                <option value="TE">Teatro</option>
+                <option value="RO">Romance</option>
+            </select>
+            <select name="p_livro">
+                <option value="FC" selected>Ficção</option>
+                <option value="AV">Aventura</option>
+                <option value="NF">Não-Ficção</option>
+                <option value="TE">Teatro</option>
+                <option value="RO">Romance</option>
+            </select>
+            <br><br>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Enviar" name="p_operacao">
+        </form>
+    </center>
+    
+    <br><br><br>
+    
+    <!-- Formulário 4 -->
+    <form>
+        <p>Você fuma</p>
+        <input type="radio" name="p_fuma" value="TRUE"> Sim
+        <input type="radio" name="p_fuma" value="FALSE"> Não
+        <input type="radio" name="p_fuma" value="TRUEFALSE"> Às vezes
+        <br><br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Enviar" name="p_operacao">
+    </form>
+    
+    <br><br><br>
+    
+    <!-- Formulário 5 -->
+    <form>
+        <table>
+            <tr>
+                <td align="right">Entre com seu email:</td>
+                <td align="right">
+                    <input type="text" name="p_login" size="20" maxlength="20">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Entre com sua senha:</td>
+                <td align="right">
+                    <input type="password" name="p_senha1" size="20" maxlength="20">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Confirme sua senha:</td>
+                <td align="right">
+                    <input type="password" name="p_senha2" size="20" maxlength="20">
+                </td>
+            </tr>
+        </table>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Enviar" name="p_operacao">
+    </form>
+</body>
+</html>

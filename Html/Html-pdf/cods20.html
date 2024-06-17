@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function Resultado() {
+            var op1 = document.operacao.valor1.value;
+            var op2 = document.operacao.valor2.value;
+            var op3 = op1 * op2;
+            alert("Resposta = " + op3);
+        }
+
+        // Operadores de concatenação
+        var x = "Curso no ";
+        var y = "CEFET";
+        var local = x + y; // Resulta em "Curso no CEFET"
+
+        var valor = 14;
+        var resposta;
+        if (valor == 14) { 
+            resposta = true;
+            valor++;
+        } else {
+            resposta = false;
+        }
+
+      /* function testeFor() {
+            var contador = 0;
+            for (var i = 0; i < 10; i += 2) {
+                contador += 1;
+                alert("Entrei = " + i);
+            }
+        }
+        */
+        function testeWhile() {
+            var i = 0;
+            while (i < 10) {
+                alert("Entrei = " + i);
+                i += 2;
+            }
+        }
+
+        function ano(x) {
+            var resultado = "";
+            if (x % 2 == 0)
+                resultado = "Este ano é par";
+            else
+                resultado = "Este ano é ímpar";
+            return resultado;
+        }
+    </script>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <section>
+        <form name="operacao">
+            Primeiro Valor:
+            <input type="text" name="valor1" size="5"><br>  
+            Segundo Valor:
+            <input type="text" name="valor2" size="5"><br>
+            <input type="button" onClick="Resultado()" name="Botao" value="Resultado">
+        </form>
+        <br>
+        <input type="button" onClick="alert(local)" value="Concatenação"><br><br>
+        <input type="button" onClick="alert(resposta)" value="Condição If"><br><br>
+        <input type="button" onClick="alert(ano(2024))" value="Função Ano"><br><br>
+    </section>
+    
+    <!-- Chamada para as funções testeFor() e testeWhile() -->
+    <script>
+        testeFor();
+        testeWhile();
+    </script>
+</body>
+</html>
